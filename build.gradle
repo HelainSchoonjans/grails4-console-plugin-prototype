@@ -17,6 +17,7 @@ apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
+apply plugin:"org.grails.grails-gsp"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
@@ -63,6 +64,8 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
+    runtime 'org.grails.plugins:grails-console:2.1.1'
+    compile "org.grails.plugins:gsp"
 }
 
 bootRun {
